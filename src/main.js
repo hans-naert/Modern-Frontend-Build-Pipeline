@@ -1,3 +1,4 @@
+import './styles.css';
 import { greet, getCurrentTime } from './utils';
 import { createButton, addStyles } from './ui';
 
@@ -18,16 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
   });
 
-  // Add some simple styles
-  addStyles(heading, {
-    color: '#3b82f6',
-    marginBottom: '0.5rem'
-  });
-
-  addStyles(timeDisplay, {
-    color: '#4b5563',
-    fontWeight: 'bold'
-  });
+  // No need for inline styles anymore, using CSS file instead
 
   // Add everything to the page
   app.appendChild(heading);
