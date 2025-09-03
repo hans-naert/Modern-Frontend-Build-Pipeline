@@ -29,19 +29,49 @@
     }
   });
 
+  // src/ui.js
+  function createButton(text, clickHandler) {
+    const button = document.createElement("button");
+    button.textContent = text;
+    button.addEventListener("click", clickHandler);
+    return button;
+  }
+  function addStyles(element, styles) {
+    Object.assign(element.style, styles);
+    return element;
+  }
+  var init_ui = __esm({
+    "src/ui.js"() {
+    }
+  });
+
   // src/main.js
   var require_main = __commonJS({
     "src/main.js"() {
       init_utils();
+      init_ui();
       document.addEventListener("DOMContentLoaded", () => {
         const app = document.getElementById("app");
         const heading = document.createElement("h1");
         heading.textContent = greet("esbuild user");
         const timeDisplay = document.createElement("p");
         timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
+        timeDisplay.id = "time-display";
+        const refreshButton = createButton("Refresh Time", () => {
+          timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
+        });
+        addStyles(heading, {
+          color: "#3b82f6",
+          marginBottom: "0.5rem"
+        });
+        addStyles(timeDisplay, {
+          color: "#4b5563",
+          fontWeight: "bold"
+        });
         app.appendChild(heading);
         app.appendChild(timeDisplay);
-        console.log("Application initialized!");
+        app.appendChild(refreshButton);
+        console.log("Application initialized with ESM!");
       });
     }
   });
