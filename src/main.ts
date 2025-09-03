@@ -2,6 +2,7 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import {greet} from "./utils";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -20,5 +21,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </p>
   </div>
 `
+
+  const heading = document.createElement('h1');
+  heading.textContent = greet('Vite user');
+  document.body.appendChild(heading);
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
