@@ -7,14 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js",
     "dev": "node build.js --watch",
-    "serve":"serve ."
+    "serve": "serve ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
     "esbuild": "^0.25.9",
+    "esbuild-plugin-babel": "^0.2.3",
     "serve": "^14.2.4"
+  },
+  "dependencies": {
+    "@babel/preset-typescript": "^7.27.1"
   }
 }

@@ -22,8 +22,8 @@ var init_styles = __esm({
 
 // src/utils.ts
 function greet(name) {
-  const hour = (/* @__PURE__ */ new Date()).getHours();
-  let greeting = "";
+  var hour = (/* @__PURE__ */ new Date()).getHours();
+  var greeting = "";
   if (hour < 12) {
     greeting = "Good morning";
   } else if (hour < 18) {
@@ -31,10 +31,10 @@ function greet(name) {
   } else {
     greeting = "Good evening";
   }
-  return `${greeting}, ${name}!`;
+  return "".concat(greeting, ", ").concat(name, "!");
 }
 function getCurrentTime() {
-  const now = /* @__PURE__ */ new Date();
+  var now = /* @__PURE__ */ new Date();
   return now.toLocaleTimeString();
 }
 var init_utils = __esm({
@@ -44,7 +44,7 @@ var init_utils = __esm({
 
 // src/ui.ts
 function createButton(text, clickHandler) {
-  const button = document.createElement("button");
+  var button = document.createElement("button");
   button.textContent = text;
   button.addEventListener("click", clickHandler);
   return button;
@@ -61,17 +61,17 @@ var require_main = __commonJS({
     init_styles();
     init_utils();
     init_ui();
-    document.addEventListener("DOMContentLoaded", () => {
-      const app = document.getElementById("app");
-      const heading = document.createElement("h1");
+    document.addEventListener("DOMContentLoaded", function() {
+      var app = document.getElementById("app");
+      var heading = document.createElement("h1");
       heading.textContent = greet("esbuild user");
-      const timeDisplay = document.createElement("p");
-      timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
+      var timeDisplay = document.createElement("p");
+      timeDisplay.textContent = "Current time: ".concat(getCurrentTime());
       timeDisplay.id = "time-display";
-      const refreshButton = createButton("Refresh Time", () => {
-        timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
+      var refreshButton = createButton("Refresh Time", function() {
+        timeDisplay.textContent = "Current time: ".concat(getCurrentTime());
       });
-      const logo = document.createElement("img");
+      var logo = document.createElement("img");
       logo.src = logo_default;
       logo.alt = "Logo";
       logo.width = 100;

@@ -1,5 +1,6 @@
 // build.js
 const esbuild = require('esbuild');
+const babel = require('esbuild-plugin-babel').default;
 
 const isWatch = process.argv.includes('--watch');
 
@@ -10,6 +11,17 @@ const buildOptions = {
   format: 'esm',
   loader: { '.svg': 'dataurl' },
   publicPath: 'dist',
+  plugins: [
+    babel({
+      filter: /\.([jt]sx?)$/, // Only process .js, .ts, .jsx, .tsx files
+      config: {
+        presets: [
+          "@babel/preset-env",
+          "@babel/preset-typescript"
+        ]
+      }
+    })
+  ],
 };
 
 if (isWatch) {
