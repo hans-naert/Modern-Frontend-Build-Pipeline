@@ -4,11 +4,11 @@ const esbuild = require('esbuild');
 const isWatch = process.argv.includes('--watch');
 
 const buildOptions = {
-  entryPoints: ['src/main.js'],
+  entryPoints: ['src/main.ts'],
   bundle: true,
   outfile: 'dist/bundle.js',
   format: 'esm',
-  loader: { '.svg': 'data-url' },
+  loader: { '.svg': 'dataurl' },
   publicPath: 'dist',
 };
 
@@ -16,7 +16,13 @@ if (isWatch) {
   esbuild.context(buildOptions).then(ctx => {
     ctx.watch();
     console.log('Watching for changes...');
-  }).catch(() => process.exit(1));
+  }).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 } else {
-  esbuild.build(buildOptions).catch(() => process.exit(1));
+  esbuild.build(buildOptions).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }

@@ -1,4 +1,4 @@
-export function greet(name) {
+export function greet(name: string): string {
   const hour = new Date().getHours();
   let greeting = '';
 
@@ -12,7 +12,7 @@ export function greet(name) {
   return `${greeting}, ${name}!`;
 }
 
-export function getCurrentTime() {
+export function getCurrentTime(): string {
   const now = new Date();
   return now.toLocaleTimeString();
 }
