@@ -1,3 +1,4 @@
+import logoUrl from './logo.svg';
 import './styles.css';
 import { greet, getCurrentTime } from './utils';
 import { createButton, addStyles } from './ui';
@@ -19,12 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
   });
 
+  //Create logo image
+  const logo = document.createElement('img');
+  logo.src = logoUrl;
+  logo.alt = 'Logo';
+  logo.width = 100;
+  logo.height = 100;
+
   // No need for inline styles anymore, using CSS file instead
 
   // Add everything to the page
   app.appendChild(heading);
   app.appendChild(timeDisplay);
   app.appendChild(refreshButton);
+  app.appendChild(logo);
 
   console.log('Application initialized with ESM!');
 });

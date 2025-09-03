@@ -6,6 +6,14 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
+// src/logo.svg
+var logo_default;
+var init_logo = __esm({
+  "src/logo.svg"() {
+    logo_default = "dist/logo-U353NR2Z.svg";
+  }
+});
+
 // src/styles.css
 var init_styles = __esm({
   "src/styles.css"() {
@@ -49,6 +57,7 @@ var init_ui = __esm({
 // src/main.js
 var require_main = __commonJS({
   "src/main.js"() {
+    init_logo();
     init_styles();
     init_utils();
     init_ui();
@@ -62,9 +71,15 @@ var require_main = __commonJS({
       const refreshButton = createButton("Refresh Time", () => {
         timeDisplay.textContent = `Current time: ${getCurrentTime()}`;
       });
+      const logo = document.createElement("img");
+      logo.src = logo_default;
+      logo.alt = "Logo";
+      logo.width = 100;
+      logo.height = 100;
       app.appendChild(heading);
       app.appendChild(timeDisplay);
       app.appendChild(refreshButton);
+      app.appendChild(logo);
       console.log("Application initialized with ESM!");
     });
   }
