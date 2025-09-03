@@ -1,5 +1,6 @@
 // build.js
 const esbuild = require('esbuild');
+const { copyWorkboxLibraries } = require('workbox-build');
 const injectManifest = require('workbox-build').injectManifest;
 const path = require('path');
 const fs = require('fs');
@@ -24,6 +25,43 @@ const buildOptions = {
   format: 'esm',
   loader: { '.svg': 'dataurl' },
 };
+
+function copyIndexHtml() {
+  const src = path.join(__dirname, 'src', 'index.html');
+  const dest = path.join(__dirname, 'dist', 'index.html');
+  try {
+    fs.copyFileSync(src, dest);
+    console.log('Copied index.html to dist');
+  } catch (err) {
+    console.error('Failed to copy index.html:', err);
+  }
+}
+
+function copyManifest() {
+  const src = path.join(__dirname, 'src', 'manifest.json');
+  const dest = path.join(__dirname, 'dist', 'manifest.json');
+  try {
+    fs.copyFileSync(src, dest);
+    console.log('Copied manifest.json to dist');
+  } catch (err) {
+    console.error('Failed to copy manifest.json:', err);
+  }
+}
+
+function copyIcons() {
+  const icons = ['img1.png', 'img2.png'];
+  icons.forEach(icon => {
+    const srcIcon = path.join(__dirname, 'src', icon);
+    const destIcon = path.join(__dirname, 'dist', icon);
+    try {
+      fs.copyFileSync(srcIcon, destIcon);
+      console.log(`Copied ${icon} to dist`);
+    } catch (err) {
+      console.error(`Failed to copy ${icon}:`, err);
+    }
+  });
+}
+
 
 if (isWatch) {
   esbuild.context(buildOptions).then(ctx => {
@@ -52,12 +90,14 @@ async function buildServiceWorker() {
       platform: 'browser',
       target: ['es2020'],
     });
-    copyIndexHtml();
+  copyManifest();
+  copyIcons();
+  copyIndexHtml();
     await injectManifest({
       swSrc: 'temp/sw.js',
       swDest: 'dist/sw.js',
       globDirectory: 'dist',
-      globPatterns: ['**/*.{html,js,png,json,css}'],
+      globPatterns: ['**/*.{html,js,png,json,css,json}'],
     });
     console.log('Service worker built and manifest injected.');
   } catch (err) {

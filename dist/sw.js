@@ -2662,7 +2662,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       init_workbox_core();
       self.skipWaiting();
       clientsClaim();
-      precacheAndRoute([{"revision":"c1da8841b9196e30c326c9f0c8fa64af","url":"bundle.css"},{"revision":"f760de5cc8c49996d7500a99ee592b8e","url":"bundle.js"},{"revision":"1ef9ddf5112e82606b548c5307f37e1f","url":"index.html"}]);
+      precacheAndRoute([{"revision":"c1da8841b9196e30c326c9f0c8fa64af","url":"bundle.css"},{"revision":"f760de5cc8c49996d7500a99ee592b8e","url":"bundle.js"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img1.png"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img2.png"},{"revision":"12f190c2528481644691856daadcfd2a","url":"index.html"},{"revision":"1613899708123b789531dd7f76acc1d5","url":"manifest.json"}]);
     }
   });
   require_sw();
