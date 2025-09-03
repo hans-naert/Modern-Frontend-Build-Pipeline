@@ -2,6 +2,7 @@ import logoUrl from './logo.svg';
 import './styles.css';
 import { greet, getCurrentTime } from './utils';
 import { createButton, addStyles } from './ui';
+import { Workbox} from 'workbox-window'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -36,4 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(logo);
 
   console.log('Application initialized with ESM!');
+
+  //serviceworker registration
+  if ('serviceWorker' in navigator) {
+    const wb = new Workbox('sw.js');
+    wb.register().then(() => {
+      console.log('Service worker registered successfully.');
+    }).catch((error) => {
+      console.error('Service worker registration failed:', error);
+    });
+  }
+
 });
