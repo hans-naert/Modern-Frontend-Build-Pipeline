@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild src/main.js --bundle --outfile=dist/bundle.js --format=esm",
-    "dev": "esbuild src/main.js --bundle --outfile=dist/bundle.js --format=esm --watch"
+    "dev": "esbuild src/main.js --bundle --outfile=dist/bundle.js --format=esm --watch",
+    "serve":"serve ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "esbuild": "^0.25.9"
+    "esbuild": "^0.25.9",
+    "serve": "^14.2.4"
   }
 }
