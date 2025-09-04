@@ -112,3 +112,15 @@ jobs:
       - name: Build project
         run: npm run build
 ```
+
+## Uitbreidingsopdracht CD 
+Breid de pipeline uit met testen en artifact-opslag.
+
+Voeg aan de yml het volgende toe:
+```
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-dist
+          path: dist/
+```
