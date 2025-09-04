@@ -75,4 +75,40 @@ clientsClaim();
 // IMPORTANT: keep the literal `self.__WB_MANIFEST` so injectManifest can replace it.
 precacheAndRoute(self.__WB_MANIFEST);
 ```
+## Hands-on GitHub Actions met Vite + Typescript
+### Basisopdracht CI:
 
+Maak een eenvoudige GitHub Actions workflow die automatisch de Vite-projectbuild uitvoert en de TypeScript-code compileert bij elke push naar de repository.
+
+Add .github\workflows\ci.yml
+```
+name: Vite + TypeScript CI
+
+on:
+  push:
+    branches: [ "ci-cd" ]
+  pull_request:
+    branches: [ "ci-cd" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: TypeScript check
+        run: npm run type-check
+
+      - name: Build project
+        run: npm run build
+```
