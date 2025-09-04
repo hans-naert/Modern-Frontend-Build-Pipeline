@@ -29,7 +29,8 @@ export default defineConfig({
       },
       injectManifest: {
         globPatterns: ["**/*.{js,css,html,png,svg,json}"]
-      }
+      },
+      injectRegister: false // voorkom dat registerSW.js wordt gegenereerd
     })
   ],
   build: {
