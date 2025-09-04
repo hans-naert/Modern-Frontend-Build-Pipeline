@@ -20,3 +20,59 @@
   ```
     assetsInlineLimit: 100000 // verhoog de limiet voor inline assets naar 100KB
   ```
+
+## Hands-on Workbox & VITE
+Gebruik Vite met de PWA-plugin om een installeerbare app te creëren die ook offline gebruikt kan worden.
+
+Installeer de vite-plugin-pwa en workbox-window: `npm install vite-plugin-pwa workbox-window --save-dev`
+
+Voeg aan vite.config.ts het volgende toe:
+```
+  plugins: [
+    VitePWA({
+      strategies: "injectManifest",
+      srcDir: "src",
+      filename: "sw.ts",
+      manifest: {
+        name: "Vite PWA App",
+        short_name: "VitePWA",
+        start_url: ".",
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#317EFB",
+        icons: [
+          {
+            src: "img1.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "img2.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
+      },
+      injectManifest: {
+        globPatterns: ["**/*.{js,css,html,png,svg,json}"]
+      }
+    })
+  ],
+```
+
+Voeg een serviceworker sw.ts toe:
+```
+/// <reference lib="webworker" />
+import { precacheAndRoute } from "workbox-precaching";
+import { clientsClaim } from "workbox-core";
+
+// Local typing so TS accepts the Workbox injected manifest placeholder.
+declare const self: ServiceWorkerGlobalScope & { __WB_MANIFEST: Array<{ url: string; revision?: string }> };
+
+self.skipWaiting();
+clientsClaim();
+
+// IMPORTANT: keep the literal `self.__WB_MANIFEST` so injectManifest can replace it.
+precacheAndRoute(self.__WB_MANIFEST);
+```
+

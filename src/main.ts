@@ -4,6 +4,9 @@ import logoUrl from './logo.svg';
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import {greet} from "./utils";
+import img1Url from '/img1.png';
+import img2Url from '/img2.png';
+import { Workbox } from "workbox-window";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -20,6 +23,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
+    <img src="${img1Url}" />
+    <img src="${img2Url}" />
   </div>
 `
 
@@ -37,3 +42,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+if ("serviceWorker" in navigator) {
+  const wb = new Workbox("/sw.js");
+
+  wb.addEventListener("waiting", () => {
+    console.log("Nieuwe versie klaar, herladen...");
+    wb.messageSkipWaiting();
+    window.location.reload();
+  });
+
+  wb.register();
+}
