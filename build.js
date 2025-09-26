@@ -8,7 +8,7 @@ const buildOptions = {
   bundle: true,
   outfile: 'dist/bundle.js',
   format: 'esm',
-  loader: { '.svg': 'data-url' },
+  loader: { '.svg': 'dataurl' },
   publicPath: 'dist',
 };
 
