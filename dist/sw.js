@@ -7,21 +7,21 @@
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
 
-  // node_modules/workbox-core/_version.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_version.js
   var init_version = __esm({
-    "node_modules/workbox-core/_version.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_version.js"() {
       "use strict";
       try {
-        self["workbox:core:7.2.0"] && _();
+        self["workbox:core:7.4.0"] && _();
       } catch (e) {
       }
     }
   });
 
-  // node_modules/workbox-core/models/messages/messages.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/messages/messages.js
   var messages;
   var init_messages = __esm({
-    "node_modules/workbox-core/models/messages/messages.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/messages/messages.js"() {
       init_version();
       messages = {
         "invalid-value": ({ paramName, validValueDescription, value }) => {
@@ -188,10 +188,10 @@
     }
   });
 
-  // node_modules/workbox-core/models/messages/messageGenerator.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/messages/messageGenerator.js
   var generatorFunction, messageGenerator;
   var init_messageGenerator = __esm({
-    "node_modules/workbox-core/models/messages/messageGenerator.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/messages/messageGenerator.js"() {
       init_messages();
       init_version();
       generatorFunction = (code, details = {}) => {
@@ -205,10 +205,10 @@
     }
   });
 
-  // node_modules/workbox-core/_private/WorkboxError.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/WorkboxError.js
   var WorkboxError;
   var init_WorkboxError = __esm({
-    "node_modules/workbox-core/_private/WorkboxError.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/WorkboxError.js"() {
       init_messageGenerator();
       init_version();
       WorkboxError = class extends Error {
@@ -230,10 +230,10 @@
     }
   });
 
-  // node_modules/workbox-core/_private/assert.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/assert.js
   var isArray, hasMethod, isType, isInstance, isOneOf, isArrayOfClass, finalAssertExports;
   var init_assert = __esm({
-    "node_modules/workbox-core/_private/assert.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/assert.js"() {
       init_WorkboxError();
       init_version();
       isArray = (value, details) => {
@@ -288,10 +288,10 @@
     }
   });
 
-  // node_modules/workbox-core/_private/cacheNames.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/cacheNames.js
   var _cacheNameDetails, _createCacheName, eachCacheNameDetail, cacheNames;
   var init_cacheNames = __esm({
-    "node_modules/workbox-core/_private/cacheNames.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/cacheNames.js"() {
       init_version();
       _cacheNameDetails = {
         googleAnalytics: "googleAnalytics",
@@ -335,10 +335,10 @@
     }
   });
 
-  // node_modules/workbox-core/_private/logger.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/logger.js
   var logger;
   var init_logger = __esm({
-    "node_modules/workbox-core/_private/logger.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/logger.js"() {
       init_version();
       logger = false ? null : (() => {
         if (!("__WB_DISABLE_DEV_LOGS" in globalThis)) {
@@ -393,30 +393,30 @@
     }
   });
 
-  // node_modules/workbox-core/_private/waitUntil.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/waitUntil.js
   function waitUntil(event, asyncFn) {
     const returnPromise = asyncFn();
     event.waitUntil(returnPromise);
     return returnPromise;
   }
   var init_waitUntil = __esm({
-    "node_modules/workbox-core/_private/waitUntil.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/waitUntil.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-precaching/_version.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/_version.js
   var init_version2 = __esm({
-    "node_modules/workbox-precaching/_version.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/_version.js"() {
       "use strict";
       try {
-        self["workbox:precaching:7.2.0"] && _();
+        self["workbox:precaching:7.4.0"] && _();
       } catch (e) {
       }
     }
   });
 
-  // node_modules/workbox-precaching/utils/createCacheKey.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/createCacheKey.js
   function createCacheKey(entry) {
     if (!entry) {
       throw new WorkboxError("add-to-cache-list-unexpected-type", { entry });
@@ -449,17 +449,17 @@
   }
   var REVISION_SEARCH_PARAM;
   var init_createCacheKey = __esm({
-    "node_modules/workbox-precaching/utils/createCacheKey.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/createCacheKey.js"() {
       init_WorkboxError();
       init_version2();
       REVISION_SEARCH_PARAM = "__WB_REVISION__";
     }
   });
 
-  // node_modules/workbox-precaching/utils/PrecacheInstallReportPlugin.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/PrecacheInstallReportPlugin.js
   var PrecacheInstallReportPlugin;
   var init_PrecacheInstallReportPlugin = __esm({
-    "node_modules/workbox-precaching/utils/PrecacheInstallReportPlugin.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/PrecacheInstallReportPlugin.js"() {
       init_version2();
       PrecacheInstallReportPlugin = class {
         constructor() {
@@ -488,10 +488,10 @@
     }
   });
 
-  // node_modules/workbox-precaching/utils/PrecacheCacheKeyPlugin.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/PrecacheCacheKeyPlugin.js
   var PrecacheCacheKeyPlugin;
   var init_PrecacheCacheKeyPlugin = __esm({
-    "node_modules/workbox-precaching/utils/PrecacheCacheKeyPlugin.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/PrecacheCacheKeyPlugin.js"() {
       init_version2();
       PrecacheCacheKeyPlugin = class {
         constructor({ precacheController: precacheController2 }) {
@@ -505,7 +505,7 @@
     }
   });
 
-  // node_modules/workbox-precaching/utils/printCleanupDetails.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/printCleanupDetails.js
   function printCleanupDetails(deletedURLs) {
     const deletionCount = deletedURLs.length;
     if (deletionCount > 0) {
@@ -516,7 +516,7 @@
   }
   var logGroup;
   var init_printCleanupDetails = __esm({
-    "node_modules/workbox-precaching/utils/printCleanupDetails.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/printCleanupDetails.js"() {
       init_logger();
       init_version2();
       logGroup = (groupTitle, deletedURLs) => {
@@ -529,7 +529,7 @@
     }
   });
 
-  // node_modules/workbox-precaching/utils/printInstallDetails.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/printInstallDetails.js
   function _nestedGroup(groupTitle, urls) {
     if (urls.length === 0) {
       return;
@@ -555,13 +555,13 @@
     }
   }
   var init_printInstallDetails = __esm({
-    "node_modules/workbox-precaching/utils/printInstallDetails.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/printInstallDetails.js"() {
       init_logger();
       init_version2();
     }
   });
 
-  // node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js
   function canConstructResponseFromBodyStream() {
     if (supportStatus === void 0) {
       const testResponse = new Response("");
@@ -579,12 +579,12 @@
   }
   var supportStatus;
   var init_canConstructResponseFromBodyStream = __esm({
-    "node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/canConstructResponseFromBodyStream.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/copyResponse.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/copyResponse.js
   async function copyResponse(response, modifier) {
     let origin = null;
     if (response.url) {
@@ -605,17 +605,17 @@
     return new Response(body, modifiedResponseInit);
   }
   var init_copyResponse = __esm({
-    "node_modules/workbox-core/copyResponse.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/copyResponse.js"() {
       init_canConstructResponseFromBodyStream();
       init_WorkboxError();
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private/getFriendlyURL.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/getFriendlyURL.js
   var getFriendlyURL;
   var init_getFriendlyURL = __esm({
-    "node_modules/workbox-core/_private/getFriendlyURL.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/getFriendlyURL.js"() {
       init_version();
       getFriendlyURL = (url) => {
         const urlObj = new URL(String(url), location.href);
@@ -624,7 +624,7 @@
     }
   });
 
-  // node_modules/workbox-core/_private/cacheMatchIgnoreParams.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/cacheMatchIgnoreParams.js
   function stripParams(fullURL, ignoreParams) {
     const strippedURL = new URL(fullURL);
     for (const param of ignoreParams) {
@@ -648,15 +648,15 @@
     return;
   }
   var init_cacheMatchIgnoreParams = __esm({
-    "node_modules/workbox-core/_private/cacheMatchIgnoreParams.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/cacheMatchIgnoreParams.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private/Deferred.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/Deferred.js
   var Deferred;
   var init_Deferred = __esm({
-    "node_modules/workbox-core/_private/Deferred.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/Deferred.js"() {
       init_version();
       Deferred = class {
         /**
@@ -672,16 +672,16 @@
     }
   });
 
-  // node_modules/workbox-core/models/quotaErrorCallbacks.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/quotaErrorCallbacks.js
   var quotaErrorCallbacks;
   var init_quotaErrorCallbacks = __esm({
-    "node_modules/workbox-core/models/quotaErrorCallbacks.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/models/quotaErrorCallbacks.js"() {
       init_version();
       quotaErrorCallbacks = /* @__PURE__ */ new Set();
     }
   });
 
-  // node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js
   async function executeQuotaErrorCallbacks() {
     if (true) {
       logger.log(`About to run ${quotaErrorCallbacks.size} callbacks to clean up caches.`);
@@ -697,41 +697,41 @@
     }
   }
   var init_executeQuotaErrorCallbacks = __esm({
-    "node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js"() {
       init_logger();
       init_quotaErrorCallbacks();
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private/timeout.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/timeout.js
   function timeout(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
   var init_timeout = __esm({
-    "node_modules/workbox-core/_private/timeout.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/timeout.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-strategies/_version.js
+  // node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/_version.js
   var init_version3 = __esm({
-    "node_modules/workbox-strategies/_version.js"() {
+    "node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/_version.js"() {
       "use strict";
       try {
-        self["workbox:strategies:7.2.0"] && _();
+        self["workbox:strategies:7.4.0"] && _();
       } catch (e) {
       }
     }
   });
 
-  // node_modules/workbox-strategies/StrategyHandler.js
+  // node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/StrategyHandler.js
   function toRequest(input) {
     return typeof input === "string" ? new Request(input) : input;
   }
   var StrategyHandler;
   var init_StrategyHandler = __esm({
-    "node_modules/workbox-strategies/StrategyHandler.js"() {
+    "node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/StrategyHandler.js"() {
       init_assert();
       init_cacheMatchIgnoreParams();
       init_Deferred();
@@ -1071,7 +1071,7 @@
         /**
          * Adds a promise to the
          * [extend lifetime promises]{@link https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises}
-         * of the event event associated with the request being handled (usually a
+         * of the event associated with the request being handled (usually a
          * `FetchEvent`).
          *
          * Note: you can await
@@ -1092,13 +1092,17 @@
          *
          * Note: any work done after `doneWaiting()` settles should be manually
          * passed to an event's `waitUntil()` method (not this handler's
-         * `waitUntil()` method), otherwise the service worker thread my be killed
+         * `waitUntil()` method), otherwise the service worker thread may be killed
          * prior to your work completing.
          */
         async doneWaiting() {
-          let promise;
-          while (promise = this._extendLifetimePromises.shift()) {
-            await promise;
+          while (this._extendLifetimePromises.length) {
+            const promises = this._extendLifetimePromises.splice(0);
+            const result = await Promise.allSettled(promises);
+            const firstRejection = result.find((i) => i.status === "rejected");
+            if (firstRejection) {
+              throw firstRejection.reason;
+            }
           }
         }
         /**
@@ -1154,10 +1158,10 @@
     }
   });
 
-  // node_modules/workbox-strategies/Strategy.js
+  // node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/Strategy.js
   var Strategy;
   var init_Strategy = __esm({
-    "node_modules/workbox-strategies/Strategy.js"() {
+    "node_modules/.pnpm/workbox-strategies@7.4.1/node_modules/workbox-strategies/Strategy.js"() {
       init_cacheNames();
       init_WorkboxError();
       init_logger();
@@ -1315,10 +1319,10 @@
     }
   });
 
-  // node_modules/workbox-precaching/PrecacheStrategy.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheStrategy.js
   var PrecacheStrategy;
   var init_PrecacheStrategy = __esm({
-    "node_modules/workbox-precaching/PrecacheStrategy.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheStrategy.js"() {
       init_copyResponse();
       init_cacheNames();
       init_getFriendlyURL();
@@ -1485,10 +1489,10 @@
     }
   });
 
-  // node_modules/workbox-precaching/PrecacheController.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheController.js
   var PrecacheController;
   var init_PrecacheController = __esm({
-    "node_modules/workbox-precaching/PrecacheController.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheController.js"() {
       init_assert();
       init_cacheNames();
       init_logger();
@@ -1756,10 +1760,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/utils/getOrCreatePrecacheController.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/getOrCreatePrecacheController.js
   var precacheController, getOrCreatePrecacheController;
   var init_getOrCreatePrecacheController = __esm({
-    "node_modules/workbox-precaching/utils/getOrCreatePrecacheController.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/getOrCreatePrecacheController.js"() {
       init_PrecacheController();
       init_version2();
       getOrCreatePrecacheController = () => {
@@ -1771,29 +1775,29 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/addPlugins.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/addPlugins.js
   var init_addPlugins = __esm({
-    "node_modules/workbox-precaching/addPlugins.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/addPlugins.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-routing/_version.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/_version.js
   var init_version4 = __esm({
-    "node_modules/workbox-routing/_version.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/_version.js"() {
       "use strict";
       try {
-        self["workbox:routing:7.2.0"] && _();
+        self["workbox:routing:7.4.0"] && _();
       } catch (e) {
       }
     }
   });
 
-  // node_modules/workbox-routing/utils/constants.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/constants.js
   var defaultMethod, validMethods;
   var init_constants = __esm({
-    "node_modules/workbox-routing/utils/constants.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/constants.js"() {
       init_version4();
       defaultMethod = "GET";
       validMethods = [
@@ -1807,10 +1811,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/utils/normalizeHandler.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/normalizeHandler.js
   var normalizeHandler;
   var init_normalizeHandler = __esm({
-    "node_modules/workbox-routing/utils/normalizeHandler.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/normalizeHandler.js"() {
       init_assert();
       init_version4();
       normalizeHandler = (handler) => {
@@ -1839,10 +1843,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/Route.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/Route.js
   var Route;
   var init_Route = __esm({
-    "node_modules/workbox-routing/Route.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/Route.js"() {
       init_assert();
       init_constants();
       init_normalizeHandler();
@@ -1887,10 +1891,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/RegExpRoute.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/RegExpRoute.js
   var RegExpRoute;
   var init_RegExpRoute = __esm({
-    "node_modules/workbox-routing/RegExpRoute.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/RegExpRoute.js"() {
       init_assert();
       init_logger();
       init_Route();
@@ -1937,10 +1941,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/Router.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/Router.js
   var Router;
   var init_Router = __esm({
-    "node_modules/workbox-routing/Router.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/Router.js"() {
       init_assert();
       init_getFriendlyURL();
       init_constants();
@@ -2262,10 +2266,10 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js
   var defaultRouter, getOrCreateDefaultRouter;
   var init_getOrCreateDefaultRouter = __esm({
-    "node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/utils/getOrCreateDefaultRouter.js"() {
       init_Router();
       init_version4();
       getOrCreateDefaultRouter = () => {
@@ -2279,7 +2283,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-routing/registerRoute.js
+  // node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/registerRoute.js
   function registerRoute(capture, handler, method) {
     let route;
     if (typeof capture === "string") {
@@ -2325,7 +2329,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     return route;
   }
   var init_registerRoute = __esm({
-    "node_modules/workbox-routing/registerRoute.js"() {
+    "node_modules/.pnpm/workbox-routing@7.4.1/node_modules/workbox-routing/registerRoute.js"() {
       init_logger();
       init_WorkboxError();
       init_Route();
@@ -2335,7 +2339,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/utils/removeIgnoredSearchParams.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/removeIgnoredSearchParams.js
   function removeIgnoredSearchParams(urlObject, ignoreURLParametersMatching = []) {
     for (const paramName of [...urlObject.searchParams.keys()]) {
       if (ignoreURLParametersMatching.some((regExp) => regExp.test(paramName))) {
@@ -2345,12 +2349,12 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     return urlObject;
   }
   var init_removeIgnoredSearchParams = __esm({
-    "node_modules/workbox-precaching/utils/removeIgnoredSearchParams.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/removeIgnoredSearchParams.js"() {
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/utils/generateURLVariations.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/generateURLVariations.js
   function* generateURLVariations(url, { ignoreURLParametersMatching = [/^utm_/, /^fbclid$/], directoryIndex = "index.html", cleanURLs = true, urlManipulation } = {}) {
     const urlObject = new URL(url, location.href);
     urlObject.hash = "";
@@ -2375,16 +2379,16 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   }
   var init_generateURLVariations = __esm({
-    "node_modules/workbox-precaching/utils/generateURLVariations.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/generateURLVariations.js"() {
       init_removeIgnoredSearchParams();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/PrecacheRoute.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheRoute.js
   var PrecacheRoute;
   var init_PrecacheRoute = __esm({
-    "node_modules/workbox-precaching/PrecacheRoute.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheRoute.js"() {
       init_logger();
       init_getFriendlyURL();
       init_Route();
@@ -2428,14 +2432,14 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/addRoute.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/addRoute.js
   function addRoute(options) {
     const precacheController2 = getOrCreatePrecacheController();
     const precacheRoute = new PrecacheRoute(precacheController2, options);
     registerRoute(precacheRoute);
   }
   var init_addRoute = __esm({
-    "node_modules/workbox-precaching/addRoute.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/addRoute.js"() {
       init_registerRoute();
       init_getOrCreatePrecacheController();
       init_PrecacheRoute();
@@ -2443,16 +2447,16 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/utils/deleteOutdatedCaches.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/deleteOutdatedCaches.js
   var init_deleteOutdatedCaches = __esm({
-    "node_modules/workbox-precaching/utils/deleteOutdatedCaches.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/utils/deleteOutdatedCaches.js"() {
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/cleanupOutdatedCaches.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/cleanupOutdatedCaches.js
   var init_cleanupOutdatedCaches = __esm({
-    "node_modules/workbox-precaching/cleanupOutdatedCaches.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/cleanupOutdatedCaches.js"() {
       init_cacheNames();
       init_logger();
       init_deleteOutdatedCaches();
@@ -2460,73 +2464,73 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-precaching/createHandlerBoundToURL.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/createHandlerBoundToURL.js
   var init_createHandlerBoundToURL = __esm({
-    "node_modules/workbox-precaching/createHandlerBoundToURL.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/createHandlerBoundToURL.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/getCacheKeyForURL.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/getCacheKeyForURL.js
   var init_getCacheKeyForURL = __esm({
-    "node_modules/workbox-precaching/getCacheKeyForURL.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/getCacheKeyForURL.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/matchPrecache.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/matchPrecache.js
   var init_matchPrecache = __esm({
-    "node_modules/workbox-precaching/matchPrecache.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/matchPrecache.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/precache.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/precache.js
   function precache(entries) {
     const precacheController2 = getOrCreatePrecacheController();
     precacheController2.precache(entries);
   }
   var init_precache = __esm({
-    "node_modules/workbox-precaching/precache.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/precache.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/precacheAndRoute.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/precacheAndRoute.js
   function precacheAndRoute(entries, options) {
     precache(entries);
     addRoute(options);
   }
   var init_precacheAndRoute = __esm({
-    "node_modules/workbox-precaching/precacheAndRoute.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/precacheAndRoute.js"() {
       init_addRoute();
       init_precache();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/PrecacheFallbackPlugin.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheFallbackPlugin.js
   var init_PrecacheFallbackPlugin = __esm({
-    "node_modules/workbox-precaching/PrecacheFallbackPlugin.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/PrecacheFallbackPlugin.js"() {
       init_getOrCreatePrecacheController();
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/_types.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/_types.js
   var init_types = __esm({
-    "node_modules/workbox-precaching/_types.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/_types.js"() {
       init_version2();
     }
   });
 
-  // node_modules/workbox-precaching/index.js
+  // node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/index.js
   var init_workbox_precaching = __esm({
-    "node_modules/workbox-precaching/index.js"() {
+    "node_modules/.pnpm/workbox-precaching@7.4.1/node_modules/workbox-precaching/index.js"() {
       init_addPlugins();
       init_addRoute();
       init_cleanupOutdatedCaches();
@@ -2544,9 +2548,9 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-core/registerQuotaErrorCallback.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/registerQuotaErrorCallback.js
   var init_registerQuotaErrorCallback = __esm({
-    "node_modules/workbox-core/registerQuotaErrorCallback.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/registerQuotaErrorCallback.js"() {
       init_logger();
       init_assert();
       init_quotaErrorCallbacks();
@@ -2554,31 +2558,31 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-core/_private/canConstructReadableStream.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/canConstructReadableStream.js
   var init_canConstructReadableStream = __esm({
-    "node_modules/workbox-core/_private/canConstructReadableStream.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/canConstructReadableStream.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private/dontWaitFor.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/dontWaitFor.js
   var init_dontWaitFor = __esm({
-    "node_modules/workbox-core/_private/dontWaitFor.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/dontWaitFor.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private/resultingClientExists.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/resultingClientExists.js
   var init_resultingClientExists = __esm({
-    "node_modules/workbox-core/_private/resultingClientExists.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private/resultingClientExists.js"() {
       init_timeout();
       init_version();
     }
   });
 
-  // node_modules/workbox-core/_private.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private.js
   var init_private = __esm({
-    "node_modules/workbox-core/_private.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/_private.js"() {
       init_assert();
       init_cacheNames();
       init_cacheMatchIgnoreParams();
@@ -2597,27 +2601,27 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-core/cacheNames.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/cacheNames.js
   var init_cacheNames2 = __esm({
-    "node_modules/workbox-core/cacheNames.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/cacheNames.js"() {
       init_cacheNames();
       init_version();
     }
   });
 
-  // node_modules/workbox-core/clientsClaim.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/clientsClaim.js
   function clientsClaim() {
     self.addEventListener("activate", () => self.clients.claim());
   }
   var init_clientsClaim = __esm({
-    "node_modules/workbox-core/clientsClaim.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/clientsClaim.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/setCacheNameDetails.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/setCacheNameDetails.js
   var init_setCacheNameDetails = __esm({
-    "node_modules/workbox-core/setCacheNameDetails.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/setCacheNameDetails.js"() {
       init_assert();
       init_cacheNames();
       init_WorkboxError();
@@ -2625,24 +2629,24 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
     }
   });
 
-  // node_modules/workbox-core/skipWaiting.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/skipWaiting.js
   var init_skipWaiting = __esm({
-    "node_modules/workbox-core/skipWaiting.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/skipWaiting.js"() {
       init_logger();
       init_version();
     }
   });
 
-  // node_modules/workbox-core/types.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/types.js
   var init_types2 = __esm({
-    "node_modules/workbox-core/types.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/types.js"() {
       init_version();
     }
   });
 
-  // node_modules/workbox-core/index.js
+  // node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/index.js
   var init_workbox_core = __esm({
-    "node_modules/workbox-core/index.js"() {
+    "node_modules/.pnpm/workbox-core@7.4.1/node_modules/workbox-core/index.js"() {
       init_registerQuotaErrorCallback();
       init_private();
       init_cacheNames2();
@@ -2662,7 +2666,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       init_workbox_core();
       self.skipWaiting();
       clientsClaim();
-      precacheAndRoute([{"revision":"c1da8841b9196e30c326c9f0c8fa64af","url":"bundle.css"},{"revision":"f760de5cc8c49996d7500a99ee592b8e","url":"bundle.js"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img1.png"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img2.png"},{"revision":"12f190c2528481644691856daadcfd2a","url":"index.html"},{"revision":"1613899708123b789531dd7f76acc1d5","url":"manifest.json"}]);
+      precacheAndRoute([{"revision":"1613899708123b789531dd7f76acc1d5","url":"manifest.json"},{"revision":"12f190c2528481644691856daadcfd2a","url":"index.html"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img2.png"},{"revision":"6fa52976669ef76dc3abffd6d5329b69","url":"img1.png"},{"revision":"2cefe67aae7da6093217df7039dd8d6c","url":"bundle.js"},{"revision":"c1da8841b9196e30c326c9f0c8fa64af","url":"bundle.css"}]);
     }
   });
   require_sw();
