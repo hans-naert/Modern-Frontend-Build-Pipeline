@@ -28,10 +28,11 @@ export default defineConfig({
         ]
       },
       injectManifest: {
-        globPatterns: ["**/*.{js,css,html,png,svg,json}"]
+        globPatterns: ["**/*.{js,css,html,png,svg,json}"],
+        enableWorkboxModulesLogs: true
       },
       injectRegister: false // voorkom dat registerSW.js wordt gegenereerd
-    })
+    },)
   ],
   build: {
     target: "es2017",
